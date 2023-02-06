@@ -21,7 +21,8 @@ function setRestartButton() {
             cancelButtonColor: '#2bcf00',
             confirmButtonText: 'Yes, Restart !'
         }).then((result) => {
-            if (result.isConfirmed) {
+            console.log(result);
+            if (result) {
                 clearInterval(timer_interval);
                 setInitial();
             }
